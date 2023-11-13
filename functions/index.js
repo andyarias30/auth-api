@@ -13,7 +13,7 @@ app.use(express.json());
 // Non-protected routes:
 app.post('/users', createUser);
 app.post('/users/login', login);
-app.get('/recipes',isAuthenticated, getAllRecipes);
+app.get('/recipes', getAllRecipes);
 
 // Proctected routes:
 app.post('/recipes',isAuthenticated, createRecipe);// isAuthenticated between the place and the create function 
